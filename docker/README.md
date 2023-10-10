@@ -47,9 +47,17 @@ To build the Docker image, navigate to the root of the repository and run the fo
 
 ## Running the Docker Container
 
-To start a Docker container using the image you just built, run the following command:
+To start a Docker container using the image you just built, run the following command in a linux terminal (egf: from the terminal in VS Code):
 
 `docker run -it --rm -p 8888:8888 -v ${PWD}docker\workspace\:/workspace cogent3workshop`
+
+You can also run this natively in your OS if you use an absolute path for the workspace directory.  For example, on Windows, you could use the following command:
+
+`docker run -it --rm -p 8888:8888 -v C:\Users\username\Documents\cogent3workshop\docker\workspace\:/workspace cogent3workshop`
+
+on a Mac, you could use the following command:
+
+`docker run -it --rm -p 8888:8888 -v /Users/username/Documents/cogent3workshop/docker/workspace/:/workspace cogent3workshop`
 
 This command does the following:
 
