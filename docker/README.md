@@ -140,6 +140,16 @@ To restart the container if you have stopped it, run the following command:
 2. Note: your default directory will be the /workspace directory in the container, which will be mounted to the docker/workspace directory in your host OS.  Any files you create in the container will persist between container sessions.
 2. The Jupyter extension in VS Code provides an interactive interface similar to the classic Jupyter web interface. You can add cells, run code, visualize outputs, and more.
 
+### using the ZSH shell in VS Code's terminal
+
+ZSH is a more descriptive shell for working with the terminal.  To use it in VS Code, open a terminal in VS Code using the command ctrl-` and then type `zsh` and press enter.  You can then use the terminal as you normally would.
+
+You can also choose a new ZSH shell in the terminal drop down.
+
+You can also tell VS Code that you want to default to ZSH shells when you open a new terminal by clicking on the preferences cog icon, selecting settings and modifying the `Terminal > Integrated > Default Profile: Linux` setting to `zsh`.
+
+![ZSH shell in VS Code](/docker/images/default_zsh.jpg)
+
 ## Naming continers
 
 By default containers are given random names, like `condescending_tesla`.  To explicitly name a container, add the following argument to the `docker run` command:
