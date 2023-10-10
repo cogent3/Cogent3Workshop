@@ -1,5 +1,5 @@
 # Start with a base Debian image
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 # Set environment variables to non-interactive (this prevents some prompts)
 ENV DEBIAN_FRONTEND=noninteractive
@@ -7,8 +7,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Update the package list and install necessary dependencies for building Python packages and zsh
 RUN apt-get update && \
     apt-get install -y \
-    python3 \
+    python3.11 \
+    python3.11-dev \
     python3-pip \
+    python3-venv \  # <-- Added this line
     build-essential \
     libssl-dev \
     libffi-dev \
@@ -19,6 +21,13 @@ RUN apt-get update && \
     autojump && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# Set Python 3.11 as the default Python version
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+
+# Create and activate virtual environment
+RUN python3 -m venv /c3workshop
+ENV PATH="/c3workshop/bin:$PATH"
 
 # Upgrade pip
 RUN pip3 install --upgrade pip
@@ -53,9 +62,6 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.
 
 # Set up a working directory
 WORKDIR /workspace
-
-# Copy a Jupyter Notebook configuration file into the container (see below)
-# COPY jupyter_notebook_config.py /root/.jupyter/
 
 # Start Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip='0.0.0.0'", "--port=8888", "--notebook-dir=/workspace", "--no-browser", "--allow-root"]
