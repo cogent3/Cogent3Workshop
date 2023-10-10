@@ -2,6 +2,10 @@
 
 This folder contains Docker configuration files for setting up the workshop environment for working with Cogent3 in a docker container.  The container installs the latest shipping version of cogent3, and runs a jupyter server that you can use from the host environment by browsing to [localhost:8888](localhost:8888).
 
+## Screen cast: "How to set up a machine for a cogent3 workshop"
+
+<a href="/docker/images/setup_machine.mp4" title="How to set up a machine for a cogent3 workshop"><img src="/docker/images/video_screenshot.jpg" alt="How to set up a machine for a cogent3 workshop" /></a>
+
 ## Prerequisites
 
 Docker must be installed on your system. You can download Docker Desktop from [here](https://www.docker.com/products/docker-desktop).  Alternatively, on macOS, you can use Colima. See the section below for instructions on installing Colima.
