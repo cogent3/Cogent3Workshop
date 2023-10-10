@@ -1,0 +1,10 @@
+{
+    "jupyter.kernels.excludePythonEnvironments": [
+        "/bin/python"
+        ,"/bin/python3.11"
+        ,"/bin/python3"
+        ,"/usr/bin/python3"
+    ],
+    "python.defaultInterpreterPath": "/c3workshop/bin/python"
+    
+}

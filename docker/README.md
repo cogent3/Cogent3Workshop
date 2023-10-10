@@ -39,11 +39,19 @@ This container downloads and installs the following dependencies:
 - ZSH (a more descriptive linux shell)
 - OhMyZSH (a framework for managing ZSH configuration)
 
+The container also makes a directory `/workspace`` for all files that you will be working on (that will persist between container sessions) and starts a jupyter server in that directory.
+
+Note the container also sets up a virtual environment `c3workshop` that will give you an isolated python environment, and the .vscode directory contains `settings,json` to ensure that VS code uses only virtual environments to interpret jupyter notebooks. 
+
 ## Building the Docker Image
 
 To build the Docker image, navigate to the root of the repository and run the following command to build a docker image named `cogent3workshop` using the Dockerfile in the `docker` directory:
 
 `docker build --tag cogent3workshop -f docker\DockerFile .`
+
+It should take around 90s to build the image.  You can check that the image was built successfully by running the following command:
+
+`docker images`
 
 ## Running the Docker Container
 
