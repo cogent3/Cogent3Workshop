@@ -10,7 +10,7 @@ RUN apt-get update && \
     python3.11 \
     python3.11-dev \
     python3-pip \
-    python3-venv \  # <-- Added this line
+    python3-venv \  
     build-essential \
     libssl-dev \
     libffi-dev \
