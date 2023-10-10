@@ -51,21 +51,21 @@ To build the Docker image, navigate to the root of the repository and run the fo
 
 It should take around 90s to build the image.  You can check that the image was built successfully by running the following command:
 
-`docker images`
+`docker images cogent3workshop`
 
 ## Running the Docker Container
 
 To start a Docker container using the image you just built, run the following command in a linux terminal (egf: from the terminal in VS Code):
 
-`docker run -it --rm -p 8888:8888 -v ${PWD}docker\workspace\:/workspace cogent3workshop`
+`docker run -it --rm -p 8888:8888 -v ${PWD}:/workspace cogent3workshop`
 
 You can also run this natively in your OS if you use an absolute path for the workspace directory.  For example, on Windows, you could use the following command:
 
-`docker run -it --rm -p 8888:8888 -v C:\Users\username\Documents\cogent3workshop\docker\workspace\:/workspace cogent3workshop`
+`docker run -it --rm -p 8888:8888 -v C:\Users\username\Documents\cogent3workshop\:/workspace cogent3workshop`
 
 on a Mac, you could use the following command:
 
-`docker run -it --rm -p 8888:8888 -v /Users/username/Documents/cogent3workshop/docker/workspace/:/workspace cogent3workshop`
+`docker run -it --rm -p 8888:8888 -v /Users/username/Documents/cogent3workshop/:/workspace cogent3workshop`
 
 This command does the following:
 
@@ -73,7 +73,7 @@ This command does the following:
 - `-it`: Allocates an interactive terminal.  If you stop the jupyter server with ctrl-c, the container will exit.
 - `--rm`: Automatically removes the container when it exits.
 - `-p 8888:8888`: Maps port 8888 on the host to port 8888 in the container to allow access to the jupyter server from your host OS.
-- `-v ${PWD}docker\workspace\:/workspace`: Mounts the directory /docker/workspace under the current directory on the host to `/workspace` in the container
+- `-v ${PWD}docker\workspace\:/workspace`: Mounts the root of your current directory on the host to `/workspace` in the container
 - `cogent3workshop`: The name of the image we just built
 
 ## Connecting to the jupyter server from the host OS
@@ -145,7 +145,7 @@ To restart the container if you have stopped it, run the following command:
 
 1. In the attached VS Code instance, you can either create a new Jupyter notebook by right-clicking in the Explorer, selecting New File, and giving it a .ipynb extension, or you can open an existing .ipynb file from the /workspace directory
 ![Editing a notebook in a container](/docker/images/container_notebook.jpg)
-2. Note: your default directory will be the /workspace directory in the container, which will be mounted to the docker/workspace directory in your host OS.  Any files you create in the container will persist between container sessions.
+2. Note: your default directory will be the /workspace directory in the container, which will be mounted to the current director (when you ran the docker run command) in your host OS.  Any files you create in the container will persist between container sessions.
 2. The Jupyter extension in VS Code provides an interactive interface similar to the classic Jupyter web interface. You can add cells, run code, visualize outputs, and more.
 
 ### using the ZSH shell in VS Code's terminal
@@ -182,7 +182,7 @@ to run the container as an immediate terminal session that uses zsh as a shell a
 
 ## Inside the Docker Container
 
-Once inside the Docker container, you will be in the `/workspace` directory containing all the files in the /docker/workspace folder in your host OS.  You can use the `cd` command to navigate to other directories in the container.  Note the workspace directory is mounted to your host OS workspace directory so any files you create there in the container will persist between container sessions.
+Once inside the Docker container, you will be in the `/workspace` directory containing all the files that are in the directory in your host OS you were currently in when you ran the docker run command.  You can use the `cd` command to navigate to other directories in the container.  Note the workspace directory is mounted to your host OS's directory so any files you create there in the container will persist between container sessions.
 
 ## Cleaning Up
 
