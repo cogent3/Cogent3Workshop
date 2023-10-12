@@ -8,7 +8,7 @@ We will show how [cogent3](https://cogent3.org) and associated tools can greatly
 
 ## Registration, Time, Location
 
-This is on the afternoon of 21st November 2023 (before the start of Phylomania) and it's free 🎉!
+The workshop is on the afternoon of 21st November 2023 (before the start of Phylomania) and it's free 🎉!
 
 You can [register here](https://docs.google.com/forms/d/e/1FAIpQLSdj6fj1UcDr-6903u9dRxxA0rke3d8lRScaBHlsE5FZuQgzuA/viewform).
 
