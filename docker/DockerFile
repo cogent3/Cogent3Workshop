@@ -1,0 +1,74 @@
+# Start with a base Debian image
+FROM debian:bookworm-slim
+
+# Set environment variables to non-interactive (this prevents some prompts)
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update the package list and install necessary dependencies for building Python packages and zsh
+RUN apt-get update && \
+    apt-get install -y \
+    python3.11 \
+    python3.11-dev \
+    python3-pip \
+    python3-venv \  
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    zsh \
+    curl \
+    git \
+    autojump && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set Python 3.11 as the default Python version
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+
+# Create the virtual environment
+RUN python3 -m venv /c3workshop
+ENV PATH="/c3workshop/bin:$PATH"
+
+# Upgrade pip
+RUN pip install --upgrade pip 
+
+# Install cogent3 using pip
+RUN pip3 install cogent3
+
+# Install Jupyter
+RUN pip3 install jupyter    
+
+# Install ipykernal
+RUN pip3 install ipykernel
+
+# Install Oh My Zsh
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Set zsh as the default shell
+SHELL ["/usr/bin/zsh", "-c"]
+
+# Create a default .zshrc file with some suggested configurations
+RUN echo 'export ZSH="$HOME/.oh-my-zsh"' >> $HOME/.zshrc && \
+    echo 'ZSH_THEME="robbyrussell"' >> $HOME/.zshrc && \
+    echo 'plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump)' >> $HOME/.zshrc && \
+    echo 'source $ZSH/oh-my-zsh.sh' >> $HOME/.zshrc && \
+    echo 'export HISTFILE=~/.zsh_history' >> $HOME/.zshrc && \
+    echo 'export HISTSIZE=10000' >> $HOME/.zshrc && \
+    echo 'export SAVEHIST=10000' >> $HOME/.zshrc && \
+    echo 'setopt appendhistory' >> $HOME/.zshrc && \
+    echo 'setopt histignorespace' >> $HOME/.zshrc && \
+    echo 'setopt histignorealldups' >> $HOME/.zshrc && \
+    echo 'source /c3workshop/bin/activate' >> $HOME/.zshrc
+
+# Install zsh-autosuggestions and zsh-syntax-highlighting plugins
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# add venv to bash shells too
+RUN echo 'source /c3workshop/bin/activate' >> $HOME/.bashrc
+
+# Set up a working directory
+WORKDIR /workspace
+
+# Start Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip='0.0.0.0'", "--port=8888", "--notebook-dir=/workspace", "--no-browser", "--allow-root"]
