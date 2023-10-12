@@ -1,6 +1,8 @@
+<img src="https://raw.githubusercontent.com/cogent3/cogent3.github.io/e72df8c155c100f502b6a7009347d1821ab3adef/doc/_static/c3-logo.svg" alt="drawing" style="width:200px;"/>
+
 # Data Wrangling with [Cogent3](https://cogent3.org) Workshop
 
-The workshop is geared towards developers who specialize in phylogenetic methods. Acquiring empirical data for evaluating the performance of a new method is challenging. Your choice of data has important ramifications for your evaluation of the performance of your method. While the standard strategy of recycling published data sets is convenient, this risks perpetuating biases embedded in those data sets.
+The workshop is geared towards researchers who specialize in developing new phylogenetic methods. Acquiring empirical data for evaluating the performance of a new method is challenging. Your choice of data has important ramifications for your evaluation of the performance of your method. While the standard strategy of recycling published data sets is convenient, this risks perpetuating biases embedded in those data sets.
 
 We will show how [cogent3](https://cogent3.org) and associated tools can greatly simplify getting public data for analyses, serving the needs of phylogenetic method developers. As there is an overlap with standard phylogenetic data pre-processing workflows, users of phylogenetic (or molecular evolutionary) methods can also benefit from attending this workshop.
 
