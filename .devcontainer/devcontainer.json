@@ -1,0 +1,22 @@
+{
+    "name": "cogent3 workshop",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "zsh",
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+          "path": "zsh"
+        }
+      }
+    },
+    "extensions": [
+      "ms-python.python",
+      "ms-toolsai.jupyter"
+    ],
+    "postCreateCommand": "echo 'source /c3workshop/bin/activate' >> $HOME/.zshrc",
+    "remoteUser": "root"
+  }
+  
