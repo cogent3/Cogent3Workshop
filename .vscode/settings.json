@@ -6,4 +6,5 @@
         ,"/usr/bin/python3"
     ],
     "python.defaultInterpreterPath": "/c3workshop/bin/python",
+    "terminal.integrated.defaultProfile.linux": "zsh"
 }
