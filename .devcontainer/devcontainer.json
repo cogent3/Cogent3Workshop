@@ -10,13 +10,14 @@
         "zsh": {
           "path": "zsh"
         }
-      }
+      },
+      "python.defaultInterpreterPath": "/c3workshop/bin/python",
     },
     "extensions": [
       "ms-python.python",
       "ms-toolsai.jupyter"
     ],
-    "postCreateCommand": "echo 'source /c3workshop/bin/activate' >> $HOME/.zshrc",
+    "postCreateCommand": "echo '{\"python.defaultInterpreterPath\":\"/c3workshop/bin/python\"}' > .vscode/settings.json",
     "remoteUser": "root"
   }
   
