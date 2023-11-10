@@ -17,7 +17,7 @@
       "ms-python.python",
       "ms-toolsai.jupyter"
     ],
-    "postCreateCommand": "echo '{\"python.defaultInterpreterPath\":\"/c3workshop/bin/python\"}' > .vscode/settings.json",
+    "postCreateCommand": "mkdir -p .vscode && echo '{\"python.defaultInterpreterPath\":\"/c3workshop/bin/python\"}' > .vscode/settings.json",
     "remoteUser": "root",
     "mounts": [
       "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
