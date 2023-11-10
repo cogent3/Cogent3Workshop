@@ -67,8 +67,23 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.
 # add venv to bash shells too
 RUN echo 'source /c3workshop/bin/activate' >> $HOME/.bashrc
 
-# add prebaked vs code extensions
-ADD docker/vscode-extensions.tar.gz /root/.vscode-server/extensions
+# Install VS code-server 
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+# Create a non-root user 'vscode'
+RUN useradd -m vscode
+
+# Set the user's shell to zsh
+RUN chsh -s /bin/zsh vscode
+
+# Run the installation of extensions as the vscode user
+USER vscode
+
+# Install VS Code extensions (assumes that code-server is already installed and in the PATH)
+RUN code-server --install-extension ms-python.python --install-extension ms-toolsai.jupyter
+
+# Switch back to root user
+USER root
 
 # Set up a working directory
 WORKDIR /workspace
