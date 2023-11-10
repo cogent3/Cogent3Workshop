@@ -12,6 +12,11 @@ The workshop is on the afternoon of 21st November 2023 (before the start of Phyl
 
 You can [register here](https://docs.google.com/forms/d/e/1FAIpQLSdj6fj1UcDr-6903u9dRxxA0rke3d8lRScaBHlsE5FZuQgzuA/viewform).
 
+**The time:** 1pm-5pm, 21st November 2023
+
+**The location:** Room 329, Maths and Physics, U. Tasmania (Sandy Bay campus).
+
+
 ## Workshop Content
 
 The topics we will cover are:
