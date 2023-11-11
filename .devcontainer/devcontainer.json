@@ -1,0 +1,24 @@
+{
+    "name": "Cogent3 Workshop",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "zsh",
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+          "path": "zsh"
+        }
+      },
+      "python.defaultInterpreterPath": "~/c3/bin/python",
+    },
+    "extensions": [
+      "ms-python.python",
+      "ms-toolsai.jupyter"
+    ],
+    "remoteUser": "user",
+    "mounts": [
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/user/.ssh,type=bind,consistency=cached",
+    ]
+  }
