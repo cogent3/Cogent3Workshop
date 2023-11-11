@@ -1,5 +1,5 @@
 {
-    "name": "cogent3 workshop",
+    "name": "Cogent3 Workshop",
     "build": {
       "dockerfile": "Dockerfile",
       "context": ".."
@@ -11,16 +11,14 @@
           "path": "zsh"
         }
       },
-      "python.defaultInterpreterPath": "/c3workshop/bin/python",
+      "python.defaultInterpreterPath": "~/c3/bin/python",
     },
     "extensions": [
       "ms-python.python",
       "ms-toolsai.jupyter"
     ],
-    "postCreateCommand": "mkdir -p .vscode && echo '{\"python.defaultInterpreterPath\":\"/c3workshop/bin/python\"}' > .vscode/settings.json",
-    "remoteUser": "root",
+    "remoteUser": "user",
     "mounts": [
-      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/user/.ssh,type=bind,consistency=cached",
     ]
-}
-  
+  }
