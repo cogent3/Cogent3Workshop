@@ -43,8 +43,8 @@ RUN groupadd --gid $USER_GID $USERNAME && \
 USER $USERNAME
 
 # Create the virtual environment, activate it, and install packages
-RUN python3 -m venv ~/c3 && \
-    . ~/c3/bin/activate && \
+RUN python3 -m venv /home/user/c3 && \
+    . /home/user/c3/bin/activate && \
     pip install --upgrade pip && \
     pip install cogent3 flit jupyter ipykernel
 
@@ -65,15 +65,15 @@ RUN echo 'export ZSH="$HOME/.oh-my-zsh"' >> $HOME/.zshrc && \
     echo 'setopt appendhistory' >> $HOME/.zshrc && \
     echo 'setopt histignorespace' >> $HOME/.zshrc && \
     echo 'setopt histignorealldups' >> $HOME/.zshrc && \
-    echo 'source ~/c3/bin/activate' >> $HOME/.zshrc
+    echo 'source /home/user/c3/bin/activate' >> $HOME/.zshrc
 
 # Install zsh-autosuggestions and zsh-syntax-highlighting plugins
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Add venv to bash and zsh shells
-RUN echo 'source ~/c3/bin/activate' >> /home/user/.bashrc && \
-    echo 'source ~/c3/bin/activate' >> /home/user/.zshrc
+RUN echo 'source /home/user/c3/bin/activate' >> /home/user/.bashrc && \
+    echo 'source /home/user/c3/bin/activate' >> /home/user/.zshrc
 
 # Set up a working directory
 WORKDIR /workspace/Cogent3Workshop

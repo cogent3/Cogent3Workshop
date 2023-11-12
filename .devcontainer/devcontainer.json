@@ -11,7 +11,7 @@
           "path": "zsh"
         }
       },
-      "python.defaultInterpreterPath": "~/c3/bin/python",
+      "python.defaultInterpreterPath": "/home/user/c3/bin/python",
     },
     "extensions": [
       "ms-python.python",
