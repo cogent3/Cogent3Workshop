@@ -18,7 +18,4 @@
       "ms-toolsai.jupyter"
     ],
     "remoteUser": "user",
-    "mounts": [
-      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/user/.ssh,type=bind,consistency=cached",
-    ]
   }
