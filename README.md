@@ -16,7 +16,6 @@ You can [register here](https://docs.google.com/forms/d/e/1FAIpQLSdj6fj1UcDr-690
 
 **The location:** Room 329, Maths and Physics, U. Tasmania (Sandy Bay campus).
 
-
 ## Workshop Content
 
 The topics we will cover are:
@@ -34,7 +33,7 @@ Ideally, you should be able to install software on your machine (see [Computer S
 
 ## More workshop information
 
-Details regarding physical location and setting up your computer before the workshop will be posted to the [Cogent3 Workshop Wiki](https://github.com/cogent3/Cogent3Workshop/wiki).
+Details regarding physical location, zoom link and setting up your computer before the workshop will be posted to the [Cogent3 Workshop Wiki](https://github.com/cogent3/Cogent3Workshop/wiki).
 
 We look forward to seeing you there!
 
