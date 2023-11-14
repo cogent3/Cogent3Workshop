@@ -46,7 +46,7 @@ USER $USERNAME
 RUN python3 -m venv /home/user/c3 && \
     . /home/user/c3/bin/activate && \
     pip install --upgrade pip && \
-    pip install cogent3 flit jupyter ipykernel unsync
+    pip install cogent3 flit jupyter ipykernel unsync click
 
 # Install Oh My Zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

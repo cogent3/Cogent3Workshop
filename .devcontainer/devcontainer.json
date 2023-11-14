@@ -18,4 +18,5 @@
       "ms-toolsai.jupyter"
     ],
     "remoteUser": "user",
+    "postStartCommand": "echo 'Cogent3 Workshop 2023 environment is ready!'"
   }
