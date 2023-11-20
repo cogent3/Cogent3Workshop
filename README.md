@@ -38,3 +38,15 @@ Details regarding physical location, zoom link and setting up your computer befo
 We look forward to seeing you there!
 
 👾 cogent3's development team.
+
+## Cogent3 Funding
+
+Cogent3 has received funding support from the Australian National University and an [Essential Open Source Software for Science Grant](https://chanzuckerberg.com/eoss/proposals/cogent3-python-apis-for-iq-tree-and-graphbin-via-a-plug-in-architecture/) from the Chan Zuckerberg Initiative.
+
+<p align="center">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://webstyle.anu.edu.au/_anu/4/images/logos/2x_anu_logo_small.svg" height="100">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://chanzuckerberg.com/wp-content/themes/czi/img/logo.svg" height="110">
+</p>
+
