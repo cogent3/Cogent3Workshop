@@ -1,0 +1,13 @@
+name: c3
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - click=8.1.7
+  - cogent3=2023.9.22a1
+  - flit=3.9.0
+  - ipykernel=6.25.0
+  - jupyter=1.0.0
+  - unsync=1.4.0
+prefix: /home/rmcar17/anaconda3/envs/c3
