@@ -6,21 +6,24 @@ The workshop is geared towards researchers who specialize in developing new phyl
 
 We will show how [cogent3](https://cogent3.org) and associated tools can greatly simplify getting public data for analyses, serving the needs of phylogenetic method developers. As there is an overlap with standard phylogenetic data pre-processing workflows, users of phylogenetic (or molecular evolutionary) methods can also benefit from attending this workshop.
 
-## Time, Location
+## Registration, Time, Location
 
-The workshop is in Puerto Vallarta!
+The workshop is on the afternoon of 21st November 2023 (before the start of Phylomania) and it's free 🎉!
 
 You can [register here](https://docs.google.com/forms/d/e/1FAIpQLSdj6fj1UcDr-6903u9dRxxA0rke3d8lRScaBHlsE5FZuQgzuA/viewform).
 
-**The time:** 11am-4pm, July 7th 2024
+**The time:** 1pm-5pm, 21st November 2023
 
-**The location:** TO FILL IN
+**The location:** Room 329, Maths and Physics, U. Tasmania (Sandy Bay campus).
 
 ## Workshop Content
 
 The topics we will cover are:
 
-  - TO DO
+  - Factors for method developers to consider when designing experiments.
+  - How to extract specific types of sequences (e.g. by homology type, sequence class, or level of divergence) from biological databases like Genbank and Ensembl.
+  - Handling inconsistencies in biological data resources.
+  - Multiple sequence alignment and subsequent quality control.
 
 ## Prerequisites
 
@@ -30,10 +33,20 @@ Ideally, you should be able to install software on your machine (see [Computer S
 
 ## More workshop information
 
-Details regarding physical location, zoom link and setting up your computer before the workshop will be posted to this Wiki.
+Details regarding physical location, zoom link and setting up your computer before the workshop will be posted to the [Cogent3 Workshop Wiki](https://github.com/cogent3/Cogent3Workshop/wiki).
 
 We look forward to seeing you there!
 
-👾 EnsemblLite & cogent3's development team.
+👾 cogent3's development team.
 
+## Cogent3 Funding
+
+Cogent3 has received funding support from the Australian National University and an [Essential Open Source Software for Science Grant](https://chanzuckerberg.com/eoss/proposals/cogent3-python-apis-for-iq-tree-and-graphbin-via-a-plug-in-architecture/) from the Chan Zuckerberg Initiative.
+
+<p align="center">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://webstyle.anu.edu.au/_anu/4/images/logos/2x_anu_logo_small.svg" height="100">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://chanzuckerberg.com/wp-content/themes/czi/img/logo.svg" height="110">
+</p>
 
