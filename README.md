@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/cogent3/cogent3.github.io/e72df8c155c100f502b6a7009347d1821ab3adef/doc/_static/c3-logo.svg" alt="drawing" style="width:200px;"/>
+<img src="https://raw.githubusercontent.com/cogent3/cogent3.github.io/e72df8c155c100f502b6a7009347d1821ab3adef/doc/_static/c3-logo.svg"  width="200px"/>
 
 # Data Wrangling with [Cogent3](https://cogent3.org) Workshop
 
